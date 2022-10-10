@@ -1,0 +1,108 @@
+libgom (0.4-1) unstable; urgency=medium
+
+  * New upstream release
+    - Bump build-dependency against meson
+  * debian/control.in: Bump Standards-Version to 4.5.0 (no further changes)
+  * Bump debherlper version to 12
+  * debian/control.in Add libglib2.0-doc to B-D-I and mark the -doc package
+    with Build-Profiles: <!nodoc>
+  * debian/control.in: Add Rules-Requires-Root: no
+
+ -- Laurent Bigonville <bigon@debian.org>  Mon, 02 Mar 2020 13:57:22 +0100
+
+libgom (0.3.3-5) unstable; urgency=medium
+
+  * Add dh_makeshlibs -- -c4
+  * Add -Wl,-O1 to our LDFLAGS
+  * debian/libgom-1.0-0.symbols: Add Build-Depends-Package
+  * Bump Standards-Version to 4.3.0
+
+ -- Jeremy Bicha <jbicha@debian.org>  Thu, 27 Dec 2018 21:26:02 -0500
+
+libgom (0.3.3-4) unstable; urgency=medium
+
+  * Update Vcs fields for move to https://salsa.debian.org/
+  * Update debian/gbp.conf for Debian GNOME team conventions
+  * Bump debhelper compat to 11
+  * Bump Standards-Version to 4.1.3
+
+ -- Jeremy Bicha <jbicha@debian.org>  Fri, 19 Jan 2018 08:20:26 -0500
+
+libgom (0.3.3-3) unstable; urgency=medium
+
+  * debian/patches/01_test_timeout.path: Really fix FTBFS by disabling the
+    long running test (Closes: #876284)
+
+ -- Laurent Bigonville <bigon@debian.org>  Mon, 13 Nov 2017 18:47:13 +0100
+
+libgom (0.3.3-2) unstable; urgency=medium
+
+  * debian/patches/01_test_timeout.path: Increase the timeout for the
+    test-gom-stress test (Closes: #876284)
+  * debian/control.in: Bump Standards-Version to 4.1.1 (no further changes)
+  * debian/watch: Use https to check the upstream version
+
+ -- Laurent Bigonville <bigon@debian.org>  Mon, 13 Nov 2017 08:46:20 +0100
+
+libgom (0.3.3-1) unstable; urgency=medium
+
+  * New upstream version 0.3.3
+  * debian/control.in: Bump debhelper to 10.4 and add meson as build-dep
+  * debian/rules: Convert configure options to meson ones
+  * debian/control.in: Drop intltool build-dep, upstream dropped i18n support,
+    as there are no user-visible strings
+  * debian/control.in: Drop gnome-common build-dep now that we are using meson
+    (Closes: #830055)
+  * debian/control.in: Bump Standards-Version to 4.1.0 (no further changes)
+  * debian/gir1.2-gom-1.0.install: Fix installation of the gi override
+  * debian/libgom-1.0-doc.examples: Install examples in the -doc package
+  * Drop the libgom-1.0-common, there is no translations to install anymore
+  * debian/libgom-1.0-dev.install: Don't install the static lib anymore
+
+ -- Laurent Bigonville <bigon@debian.org>  Sun, 17 Sep 2017 13:17:00 +0200
+
+libgom (0.3.2-2) unstable; urgency=medium
+
+  [ Laurent Bigonville ]
+  * debian/control.in: Add an explicit build-dependency against intltool
+    (Closes: #837837)
+
+  [ Michael Biebl ]
+  * Bump debhelper compat level to 10.
+  * Bump Standards-Version to 3.9.8.
+  * Switch Vcs-Browser to cgit.
+  * Add Build-Depends on gnome-common. Required by autoreconf for the
+    GNOME_COMPILE_WARNINGS macro.
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 21 Oct 2016 15:05:58 +0200
+
+libgom (0.3.2-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.3.2
+  * Drop libgom-1.0-0-dbg, rely on automatic dbgsym package
+  * debian/control.in: Bump Standards-Version to 3.9.7 (no further changes)
+  * debian/libgom-1.0-0.symbols: Add new exported symbols
+  * debian/control.in: Adjust the Vcs-* URL's to please lintian (again)
+  * Enable introspection overrides for Python
+
+ -- Laurent Bigonville <bigon@debian.org>  Fri, 22 Apr 2016 17:55:15 +0200
+
+libgom (0.3.1-1) unstable; urgency=medium
+
+  [ Laurent Bigonville ]
+  * debian/rules: Enable call to dh_girepository during build (Closes: #788760)
+  * debian/rules, debian/control.in: Add Uploaders generation magic
+
+  [ Joseph Herlant ]
+  * Imported Upstream version 0.3.1
+  * Removing patches integrated in upstream
+  * Updating symbols file to match new upstream version
+  * debian/rules: Removing -pie flag
+
+ -- Joseph Herlant <herlantj@gmail.com>  Thu, 18 Jun 2015 09:35:39 -0700
+
+libgom (0.2.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #762966)
+
+ -- Joseph Herlant <herlantj@gmail.com>  Sat, 11 Oct 2014 12:01:04 +0200

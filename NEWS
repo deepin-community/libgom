@@ -1,0 +1,63 @@
+Major changes in version
+
+0.4
+---
+- Fix primary-keys never being monitored, which triggered crashes
+  with GLib 2.63
+- Test for invalid table names
+- Install Python overrides in correct location
+- Fix storage of NULL GDateTime values
+- Fix constraints test under older versions of SQLite
+
+0.3.3
+-----
+- Replace hardcoded values in pkg-config file
+- Add a JavaScript example
+- Remove i18n support, as there are no user-visible strings
+- Replace autotools build system with meson
+
+0.3.2
+-----
+
+- Add missing annotation for repository object
+- Support ordering queries
+- Add support for creating new tables in a version
+- Fix memory leak in GomResource
+- Bindings:
+  - Add missing annotation for repository object
+  - Add a working Python example
+  - Make ResourceGroup a sequence in Python bindings
+
+0.3.1
+-----
+- Support g_autoptr() for all gom object types
+- Add IS NULL and IS NOT NULL filters
+- Add gom_resource_group_delete_[a]sync functions
+- Fix crash on 64-bit systems with some compiler/compiler flags
+- Fix saving a modified resource a second time
+- Fix setting ID after calling gom_resource_group_write_*
+
+0.3.0
+-----
+- Update COPYING to LGPL 2.1+ to match headers
+- Add support for batched writes
+- Support the GLOB operator
+- Fix stacking of filters
+- Fix possible crashes on exit
+- Remove "adapter" property from GomResourceGroup
+- Fix a bug in automatic migration
+- Fix a number of bugs related to using GOM in bindings and
+  in multi-thread unsafe interpreters
+- Make gdk-pixbuf an optional dependency
+
+0.2.1
+-----
+
+- Fix possible crashers with AND/OR filters
+- Add support for short and long integers
+- Mark resources as "from table" after it's been inserted
+
+0.2.0
+-----
+
+- This is the first release of gom

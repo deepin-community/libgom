@@ -1,0 +1,4 @@
+usr/include/gom-1.0/gom/*
+usr/lib/*/libgom-1.0.so
+usr/lib/*/pkgconfig/gom-1.0.pc
+usr/share/gir-1.0/Gom-1.0.gir

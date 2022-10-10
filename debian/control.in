@@ -1,0 +1,78 @@
+Source: libgom
+Section: libs
+Priority: optional
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Uploaders: @GNOME_TEAM@
+Build-Depends: debhelper-compat (= 12),
+               gnome-pkg-tools,
+               gobject-introspection,
+               gtk-doc-tools,
+               libgdk-pixbuf2.0-dev,
+               libgettextpo-dev,
+               libgirepository1.0-dev,
+               libglib2.0-dev (>= 2.36),
+               libsqlite3-dev (>= 3.7),
+               meson (>= 0.48),
+               python-gi-dev,
+               python3 (>= 3.4)
+Build-Depends-Indep: libglib2.0-doc <!nodoc>
+Standards-Version: 4.5.0
+Rules-Requires-Root: no
+Homepage: https://wiki.gnome.org/Projects/Gom
+Vcs-Browser: https://salsa.debian.org/gnome-team/libgom
+Vcs-Git: https://salsa.debian.org/gnome-team/libgom.git
+
+Package: libgom-1.0-0
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Description: Object mapper from GObjects to SQLite
+ Gom provides an object mapper from GObjects to SQLite.
+ It helps you write applications that need to store structured data
+ as well as make complex queries upon that data.
+ .
+ This package contains the shared library.
+
+Package: libgom-1.0-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Suggests: libgom-1.0-doc (= ${binary:Version})
+Depends: gir1.2-gom-1.0 (= ${binary:Version}),
+         libglib2.0-dev,
+         libgom-1.0-0 (= ${binary:Version}),
+         ${misc:Depends}
+Description: libgom development files
+ Gom provides an object mapper from GObjects to SQLite.
+ It helps you write applications that need to store structured data
+ as well as make complex queries upon that data.
+ .
+ This package contains headers and libraries for developing
+ applications that use libgom.
+
+Package: libgom-1.0-doc
+Section: doc
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Build-Profiles: <!nodoc>
+Description: libgom API documentation
+ Gom provides an object mapper from GObjects to SQLite.
+ It helps you write applications that need to store structured data
+ as well as make complex queries upon that data.
+ .
+ This package contains the HTML documentation for the API.
+
+Package: gir1.2-gom-1.0
+Section: introspection
+Architecture: any
+Multi-Arch: same
+Depends: ${gir:Depends}, ${misc:Depends}
+Description: GObject introspection data for libgom
+ Gom provides an object mapper from GObjects to SQLite.
+ It helps you write applications that need to store structured data
+ as well as make complex queries upon that data.
+ .
+ This package can be used by other packages using the GIRepository format to
+ generate dynamic bindings.

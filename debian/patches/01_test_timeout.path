@@ -1,0 +1,11 @@
+--- a/tests/meson.build
++++ b/tests/meson.build
+@@ -24,7 +24,7 @@ test('test-gom-find', test_find)
+ 
+ test_stress = executable('test-gom-stress', 'test-gom-stress.c',
+   dependencies: [libgom_dep])
+-test('test-gom-stress', test_stress, timeout: 300)
++#test('test-gom-stress', test_stress, timeout: 300)
+ 
+ test_transform = executable('test-gom-transform', 'test-gom-transform.c',
+   c_args: '-DIMAGE="@0@/gnome.png"'.format(meson.current_source_dir()),
